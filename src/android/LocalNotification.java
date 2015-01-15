@@ -468,7 +468,9 @@ public class LocalNotification extends CordovaPlugin {
     * Use this instead of deprecated sendJavascript
     */
    @TargetApi(Build.VERSION_CODES.KITKAT)
-   private static void sendJavascript(final String js){
+   private static void sendJavascript(final String js) {
+	   webView.sendJavascript(js);
+	   /*
 	   webView.post(new Runnable(){
 		   public void run(){
 			   if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.KITKAT){
@@ -478,6 +480,7 @@ public class LocalNotification extends CordovaPlugin {
 			   }
 		   }
 	   });
+	   */
    }
     
   
